@@ -13,8 +13,8 @@ It is clear that people are not late to meetings because they hurry. It is likel
 ## 1.2.2
 | | Tim | Frank |
 | ---- | ---- | ---- |
-| right-handed | 38/80 | 10/20 |
-| left-handed | 2/20 | 20/80 |
+| right-handed | 38 / 80 | 10 / 20 |
+| left-handed | 2 / 20 | 20 / 80 |
 | total | 40 / 100 | 30 / 100 |
 
 ## 1.2.3
@@ -22,7 +22,7 @@ It is clear that people are not late to meetings because they hurry. It is likel
 Since the stone size is the cause of both treat selection and recovery, patients should examine the stone size-specific data.
 ```mermaid
 graph LR;
-stone size-->treat;
-stone size-->recovery;
+stone_size-->treat;
+stone_size-->recovery;
 treat-->recovery;
 ```
