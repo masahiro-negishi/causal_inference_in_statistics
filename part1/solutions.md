@@ -151,8 +151,8 @@ $$
 \begin{aligned}
 \mathbb{E}[X] &= \frac{3}{4} \\
 \mathbb{E}[Y] &= \frac{1}{2} \\
-\mathbb{E}[Y \vert X=1] &= \frac{1}{3}, \mathbb{E}[Y \vert X=0] &= 1\\
-\mathbb{E}[X \vert Y=1] &= \frac{1}{2}, \mathbb{E}[X \vert Y=0] &= 1\\
+\mathbb{E}[Y \vert X=1] &= \frac{1}{3}, \mathbb{E}[Y \vert X=0] = 1\\
+\mathbb{E}[X \vert Y=1] &= \frac{1}{2}, \mathbb{E}[X \vert Y=0] = 1\\
 Var(X) &= \frac{3}{16} \\
 Var(Y) &= \frac{1}{4} \\
 Cov(X, Y) &= -\frac{1}{8} \\
