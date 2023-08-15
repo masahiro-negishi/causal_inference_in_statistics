@@ -94,7 +94,7 @@ P(C _ D = B \vert C _ U = B) &= \sum _ {i \in \{1, 2, 3\}} P(C _ D = B, I = i \v
 \end{aligned}
 $$
 
-### 1.3.5
+## 1.3.5
 Let $X$ be a door behind which the car exists. Let $Y$ be a door that the host opens. We can assume the participant chose the door $A$ without loss of generality.
 
 $$
@@ -106,3 +106,69 @@ P(X = A \vert Y = B) &= \frac{P(Y = B \vert X = A)P(X = A)}{P(Y = B)} \\
 $$
 
 Since $P(X=B \vert Y=B) = 0$, $P(X=C \vert Y=B) = \frac{1}{3}$ is derived. The same thing holds if you change $Y=B$ to $Y=C$. Thus, the probability of winning the car will be doubled if you change the door.
+
+## 1.3.6
+### (a)
+$$
+\begin{aligned}
+\sigma _ {XY} ^ 2 &= \mathbb{E}[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])] \\
+&= \mathbb{E}[XY] - \mathbb{E}[X]\mathbb{E}[Y] \\
+&= \mathbb{E}[X]\mathbb{E}[Y] - \mathbb{E}[X]\mathbb{E}[Y] \\
+&= 0 \\
+\rho _ {XY} &= \frac{\sigma _ {XY}}{\sigma _ X \times \sigma _ Y} \\
+&= \frac{0}{\sigma _ X \times \sigma _ Y} \\
+&= 0
+\end{aligned}
+$$
+
+### (b)
+Consider the following distribution
+
+$$
+\forall (x, y) \in \{(-1, -1), (-1, 1), (0, 0), (1, -1), (1, 1)\}, P(X=x, Y=y) = \frac{1}{5} 
+$$
+
+It is clear that $X$ and $Y$ are highly dependent. Since, $\mathbb{E}[X] = \mathbb{E}[Y] = \mathbb{E}[XY] = 0$, 
+
+$$
+\rho _ {XY} = \frac{\sigma _ {XY}}{\sigma _ X \times \sigma _ Y} = \frac{0 - 0 \times 0}{\sigma _ X \times \sigma _ Y} = 0
+$$
+
+## 1.3.7
+### (a)
+$$
+\begin{aligned}
+P(X=1) &= \frac{3}{4}, P(X=0) = \frac{1}{4} \\
+P(Y=1) &= \frac{1}{2}, P(Y=0) = \frac{1}{2} \\
+P(X=1, Y=1) &= \frac{1}{4}, P(X=1, Y=0) = \frac{1}{2}, P(X=0, Y=1) = \frac{1}{4}, P(X=0, Y=0) = 0\\
+P(Y=1 \vert X=1) &= \frac{1}{3}, P(Y=0 \vert X=1) = \frac{2}{3}, P(Y=1 \vert X=0) = 1, P(Y=0 \vert X=0) = 0\\
+P(X=1 \vert Y=1) &= \frac{1}{2}, P(X=0 \vert Y=1) = \frac{1}{2}, P(X=1 \vert Y=0) = 1, P(X=0 \vert Y=0) = 0
+\end{aligned}
+$$
+
+### (b)
+$$
+\begin{aligned}
+\mathbb{E}[X] &= \frac{3}{4} \\
+\mathbb{E}[Y] &= \frac{1}{2} \\
+\mathbb{E}[Y \vert X=1] &= \frac{1}{3}, \mathbb{E}[Y \vert X=0] &= 1\\
+\mathbb{E}[X \vert Y=1] &= \frac{1}{2}, \mathbb{E}[X \vert Y=0] &= 1\\
+Var(X) &= \frac{3}{16} \\
+Var(Y) &= \frac{1}{4} \\
+Cov(X, Y) &= -\frac{1}{8} \\
+\rho _ {XY} &= - \frac{1}{\sqrt{3}}
+\end{aligned}
+$$
+
+### (c)
+$$
+\mathbb{E}[X \vert Y=1] = \frac{1}{2}
+$$
+
+### (d)
+$$
+\mathbb{E}[Y \vert X=1] = \frac{1}{3}
+$$
+
+### (e)
+Dependent since $P(X=1) \neq P(X=1 \vert Y=1)$
