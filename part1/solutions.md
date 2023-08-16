@@ -172,3 +172,39 @@ $$
 
 ### (e)
 Dependent since $P(X=1) \neq P(X=1 \vert Y=1)$
+
+## 1.3.8
+### (a)
+$$
+\begin{aligned}
+\mathbb{E}[X] &= 3.5 \\
+\mathbb{E}[Y] &= 7.0 \\
+\mathbb{E}[Y \vert X=x] &= x + 3.5 \\
+\mathbb{E}[X \vert Y=y] &= 0.5y \\
+Var(X) &\fallingdotseq 2.92 \\
+Var(Y) &\fallingdotseq 5.83 \\
+Cov(X, Y) &\fallingdotseq 2.92  \\
+\rho _ {XY} &= \frac{1}{\sqrt{2}} \\
+Cov(X, Z) &= 0
+\end{aligned}
+$$
+
+### (b)
+Executing 1_3_8.py will give the answers
+
+### (c)
+$$
+\mathbb{E}[Y \vert X=3] = 6.5
+$$
+
+### (d)
+$$
+\mathbb{E}[X \vert Y=4] = 2
+$$
+
+### (e)
+$$
+\mathbb{E}[X \vert Y=4, Z=1] = 3
+$$
+
+When, $Y$ and $Z$ are specified, the value of $X$ is uniquely determined to be 3. Thus, the result is different from (d).
