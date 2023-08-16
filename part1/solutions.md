@@ -208,3 +208,47 @@ $$
 $$
 
 When, $Y$ and $Z$ are specified, the value of $X$ is uniquely determined to be 3. Thus, the result is different from (d).
+
+## 1.3.9
+### (a)
+$$
+\begin{aligned}
+\begin{cases}
+\mathbb{E}[Y] &= a + b\mathbb{E}[X] + \mathbb{E}[\epsilon] \\
+\mathbb{E}[XY] &= a\mathbb{E}[X] + b\mathbb{E}[X^2] + \mathbb{E}[\epsilon X]
+\end{cases}
+\end{aligned}
+$$
+
+よって、$b = \frac{\sigma _ {XY}}{\sigma _ X ^ 2}$
+
+### (b)
+$$
+\begin{aligned}
+R _ {YX \cdot Z} &= 1 \\
+R _ {XY \cdot Z} &= 1 \\
+R _ {YZ \cdot X} &= 1 \\
+R _ {ZY \cdot X} &= 1 \\
+R _ {XZ \cdot Y} &= -1 \\
+R _ {ZX \cdot Y} &= -1 
+\end{aligned}
+$$
+
+## 1.4.1
+### (a)
+W, Y
+
+### (b)
+W, X, Y
+
+### (c)
+Y, Z
+
+### (d)
+T, Y, Z
+
+### (e)
+XWYT, XWYZT, XWZT, XWZYT, XYT, XYZT, XYWZT
+
+### (f)
+XWYT, XWYZT, XWZT, XYT, XYZT
