@@ -252,3 +252,54 @@ XWYT, XWYZT, XWZT, XWZYT, XYT, XYZT, XYWZT
 
 ### (f)
 XWYT, XWYZT, XWZT, XYT, XYZT
+
+## 1.5.1
+### (a)
+```mermaid
+graph LR;
+UX-->X;
+UY-->Y;
+UZ-->Z;
+X-->Y;
+Y-->Z;
+```
+
+### (b)
+$$
+\mathbb{E}[Z \vert Y=3] = \frac{3}{16}
+$$
+
+### (c)
+$$
+\mathbb{E}[Z \vert X=3] = \frac{1}{16}
+$$
+
+### (d)
+$$
+\mathbb{E}[Z \vert X=1, Y=3] = \frac{3}{16}
+$$
+
+### (e)
+#### (i)
+$$
+\begin{aligned}
+p(X=x \vert Y=2) &= \frac{p(Y=2 \vert X=x)p(X=x)}{p(Y=2)} \\
+&= \frac{\frac{1}{\sqrt{2 \pi}} \exp(-\frac{(2-\frac{x}{3})^2}{2})\frac{1}{\sqrt{2 \pi}} \exp(-\frac{x^2}{2})}{p(Y=2)} \\
+&= \frac{\frac{1}{2 \pi} \exp(-\frac{(x-\frac{3}{5})^2}{\frac{9}{5}} - \frac{9}{5})}{p(Y=2)} \\
+&= N(\frac{3}{5}, \frac{3}{\sqrt{10}})
+\end{aligned}
+$$
+
+従って、 $\mathbb{E}[X \vert Y=2] = \frac{3}{5}$
+
+#### (ii)
+$$
+\begin{aligned}
+p(Y=y \vert X=1, Z=3) &\propto p(Z=3 \vert Y=y, X=1)p(Y=y \vert X=1)p(X=1) \\
+&\propto \exp(-\frac{(3-\frac{y}{16})^2}{2})\exp(-\frac{(y-\frac{1}{3})^2}{2})\exp(-\frac{1^2}{2})
+\end{aligned}
+$$
+
+従って、$p(Y=y \vert X=1, Z=3) = N(\frac{400}{777}, \frac{256}{257})$
+
+よって、$\mathbb{E}[Y \vert X=1, Z=3] = \frac{400}{777} \fallingdotseq 0.51$
