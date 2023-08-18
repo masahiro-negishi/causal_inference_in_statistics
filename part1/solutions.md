@@ -1,5 +1,3 @@
-# 1.1
-
 ## 1.2.1
 ### (a)
 Marriage is probably not the cause of income. It is likely that higher income leads to higher chance of marriage.
@@ -303,3 +301,68 @@ $$
 従って、$p(Y=y \vert X=1, Z=3) = N(\frac{400}{777}, \frac{256}{257})$
 
 よって、$\mathbb{E}[Y \vert X=1, Z=3] = \frac{400}{777} \fallingdotseq 0.51$
+
+## 1.5.2
+### (a)
+$P(x, y ,z) = P(y \vert z, x)P(x \vert z)P(z)$より、
+
+$$
+\begin{aligned}
+P(x _ 0, y _ 0 ,z _ 0) &= (1-p _ 1)(1-q _ 1)(1-r) \\
+P(x _ 0, y _ 1 ,z _ 0) &= p _ 1(1-q _ 1)(1-r) \\
+P(x _ 1, y _ 0 ,z _ 0) &= (1-p _ 2)q _ 1(1-r) \\
+P(x _ 1, y _ 1 ,z _ 0) &= p _ 2q _ 1(1-r) \\
+P(x _ 0, y _ 0 ,z _ 1) &= (1-p _ 3)(1-q _ 2)r \\
+P(x _ 0, y _ 1 ,z _ 1) &= p _ 3(1-q _ 2)r \\
+P(x _ 1, y _ 0 ,z _ 1) &= (1-p _ 4)q _ 2r \\
+P(x _ 1, y _ 1 ,z _ 1) &= p _ 4q _ 2r \\
+P(x _ 0, y _ 0) &= (1-p _ 1)(1-q _ 1)(1-r) + (1-p _ 3)(1-q _ 2)r \\
+P(x _ 0, y _ 1) &= p _ 1(1-q _ 1)(1-r) + p _ 3(1-q _ 2)r \\
+P(x _ 1, y _ 0) &= (1-p _ 2)q _ 1(1-r) + (1-p _ 4)q _ 2r \\
+P(x _ 1, y _ 1) &= p _ 2q _ 1(1-r) + p _ 4q _ 2r \\
+P(x _ 0, z _ 0) &= (1-q _ 1)(1-r) \\
+P(x _ 1, z _ 0) &= q _ 1(1-r) \\
+P(x _ 0, z _ 1) &= (1-q _ 2)r \\
+P(x _ 1, z _ 1) &= q _ 2r \\
+P(y _ 0 ,z _ 0) &= \{(1-p _ 1)(1-q _ 1) + (1-p _ 2)q _ 1\}(1-r) \\
+P(y _ 1 ,z _ 0) &= \{p _ 1(1-q _ 1) + p _ 2q _ 1\}(1-r) \\
+P(y _ 0 ,z _ 1) &= \{(1-p _ 3)(1-q _ 2) + (1-p _ 4)q _ 2\}r \\
+P(y _ 1 ,z _ 1) &= \{p _ 3(1-q _ 2) + p _ 4q _ 2\}r \\
+\end{aligned}
+$$
+
+### (b)
+$$
+\begin{aligned}
+P(y _ 1 \vert z _ 1, x _ 1) - P(y _ 1 \vert z _ 1, x _ 0) &= p _ 4 - p _ 3 \\
+P(y _ 1 \vert z _ 0, x _ 1) - P(y _ 1 \vert z _ 0, x _ 0) &= p _ 2 - p _ 1 \\
+P(y _ 1 \vert x _ 1) - P(y _ 1 \vert x _ 0) &= \frac{P(x _ 1, y _ 1)}{P(x _ 1)} - \frac{P(x _ 0, y _ 1)}{P(x _ 0)} \\
+&= \frac{p _ 2q _ 1(1-r) + p _ 4q _ 2r}{q _ 1(1-r) + q _ 2r} - \frac{p _ 1(1-q _ 1)(1-r) + p _ 3(1-q _ 2)r}{(1-q _ 1)(1-r) + (1-q _ 2)r}
+\end{aligned}
+$$
+
+### (c)
+Assume $p _ 1 = 0.1, p _ 2 = 0.15, p _ 3 = 0.85, p _ 4 = 0.9, r = 0.5, q _ 1 = 0.8, \mathrm{and} ~ q _ 2 = 0.2$. Then,
+
+$$
+\begin{aligned}
+P(y _ 1 \vert z _ 1, x _ 1) - P(y _ 1 \vert z _ 1, x _ 0) &= 0.05 \\
+P(y _ 1 \vert z _ 0, x _ 1) - P(y _ 1 \vert z _ 0, x _ 0) &= 0.05 \\
+P(y _ 1 \vert x _ 1) - P(y _ 1 \vert x _ 0) &= 0.3 - 0.7 = -0.4
+\end{aligned}
+$$
+
+Therefore, when you see the entire population, the drug $X$ seems to lead to lower rate of death $Y$, but when you see the separated populations, the drug $X$ seems to lead to higher rate of death $Y$.
+
+## 1.5.3
+$$
+\begin{aligned}
+P(X _ 1 = 1, X _ 2 = 0, X _ 3 = 1, X _ 4 = 0) &= p _ 0 (1 - p)^2 q \\
+P(X _ 4 = 1 \vert X _ 1 = 1) &= (1-p)(1-q)q + (1-p)qp + p(1-p)q + p^3 \\
+&= (p-1)q^2 + (2p+1)(1-p)q + p^3 \\
+P(X _ 1 = 1 \vert X _ 4 = 1) &= \frac{P(X _ 4 = 1 \vert X _ 1 = 1)P(X _ 1 = 1)}{P(X _ 4 = 1)} \\
+&= \frac{p _ 0 \{(p-1)q^2 + (2p+1)(1-p)q + p^3\}}{p _ 0 \{(p-1)q^2 + (2p+1)(1-p)q + p^3\} + (1-p _ 0)\{(1-q)^2q + (1-q)qp + q^2(1-p) + qp^2\}} \\
+P(X _ 3 = 1 \vert X _ 1 = 0, X _ 4 = 1) &= \frac{(1 - p _ 0)\{(1 - q)q + qp\}p}{(1 - p _ 0)\{(1-q)^2q + (1-q)qp + q^2(1-p) + qp^2\}} \\
+&= \frac{\{(1 - q)q + qp\}p}{\{(1-q)^2q + (1-q)qp + q^2(1-p) + qp^2\}}
+\end{aligned}
+$$
