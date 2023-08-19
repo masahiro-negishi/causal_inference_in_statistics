@@ -366,3 +366,32 @@ P(X _ 3 = 1 \vert X _ 1 = 0, X _ 4 = 1) &= \frac{(1 - p _ 0)\{(1 - q)q + qp\}p}{
 &= \frac{\{(1 - q)q + qp\}p}{\{(1-q)^2q + (1-q)qp + q^2(1-p) + qp^2\}}
 \end{aligned}
 $$
+
+## 1.5.4
+Let $C$ be the door behind which the car exists, $P$ be the door that the participant pick up first, and $O$ be the door that the host opens. Let $U _ C$ stand for the uncertainity of behind which door the car is set, $U _ P$ stand for the uncertainity of which door the participant choose first, and $U _ O$ stands for the uncertainity of which door the host opens. Then, the structural causal model is defined as follows.
+
+$$
+\begin{aligned}
+U &= \{U _ C, U _ P, U _ O\} \\
+V &= \{C, P, O\} \\
+C &= U _ C \\
+P &= U _ P \\
+O &= f(C, P, U _ O) \\
+&=
+\begin{cases}
+\mathrm{randomly ~ choose ~ a ~ door ~ from ~ the ~ rest ~ two} & \mathrm{if} ~ C = P \\
+\mathrm{select ~ the ~ remaining ~ door} & \mathrm{if} ~ C \neq P
+\end{cases}
+\end{aligned}
+$$
+
+The graphical causal model is like this:
+
+```mermaid
+graph LR;
+UC-->C;
+UP-->P;
+UO-->O;
+C-->O;
+P-->O;
+```
