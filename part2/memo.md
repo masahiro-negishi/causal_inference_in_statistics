@@ -63,4 +63,20 @@ UZ-->Z;
     - p contains a chain or a fork such that the middle node is in Z
     - or
     - p contains a collider such that the collision node is not in Z and no descendant of the collision node is in Z
--
+
+## 2.5 Model Testing and Causal Search
+- Assume a possible graph G tells us that A and B are independent conditioned on C, but the estimated probabilitis from data shows that A and B are dependent conditioned on C. Then, we can reject G as a possible causal model.
+- If every d-separation condition in the model matches a conditional independence in the data, then no further test can refute the model.
+- Problems of a statstical hypothesis test over the entire model
+    - If any parameter in any function f corresponding to any edge cannot be estimated, then the joint distribution over the entire model cannot be estimated
+    - When a model does not fit to data, there is no way to determine which part of the entire model is wrong 
+- Advantage of d-separation
+    - It does not rely on the specific functions between variables
+    - It tests models locally
+- d-separation test cannot specify the single model. A set of graphs called "equivalence class" satisfy the same d-separation conditions. G1 and G2 in the same equivalence class share a common skeleton and v-structures.
+    - common skeleton: the same edges regardless of the direction
+    - common v-structures (immoralities): common colliders whose parents are not adjacent
+- c.f.) independence-equivalence, Markov equivalence
+    - https://www.ime.usp.br/~ddm/courses/mac6916/equivalences/
+    - https://stats.stackexchange.com/questions/398033/how-to-determine-if-two-directed-probabilistic-graphical-models-are-i-equivalent
+

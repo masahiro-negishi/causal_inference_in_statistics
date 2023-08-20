@@ -110,3 +110,25 @@ $\{W, Y, Z _ 1, Z _ 3\}$
 
 ### (g)
 When we fix the value of $Z _ 3$, W and $Z _ 2$ are still dependent through the path of $Z _ 2, Z _ 3, Z _ 1, X, W$. Thus, adding $W$ is effective.
+
+## 2.5.1
+### (a)
+$(Z _ 1, X), (Z _ 3, X), (X, W), (Z _ 2, Y)$
+
+### (b)
+There are $2^4$ graphs in the equivalent class, since 4 edges are reversible.
+
+### (c)
+Edges other than $(Z _ 1, X), (Z _ 3, X), (X, W), (Z _ 2, Y)$
+
+### (d)
+$Y = a + bZ _ 1 + cZ _ 2 + dZ _ 3 + eX$. If $b \neq 0$, then the model is wrong.
+
+### (e)
+$Z _ 3 = a + bW + cX$. If $b \neq 0$, then the model is wrong.
+
+### (f)
+There is no such regression.
+
+### (g)
+7 (# of nonadjacent pairs)? I am not sure.
